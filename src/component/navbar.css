@@ -1,0 +1,84 @@
+
+  /* Transparent Navbar Styles */
+  body, ul {
+    margin: 0;
+    
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding: 10px 10px 10px 10px;
+    background-color: transparent; /* Set the background to transparent */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect for the background color */
+  }
+  
+  .navbar a {
+    color:rgba(0,0,0,.7) ;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  .navbar a:hover{
+    color: black;
+    font-size:16.2px;
+  }
+  
+  /* Mobile Menu Styles */
+  .menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+  
+  .navbar-menu {
+    display: flex;
+  }
+  
+  .navbar-menu li {
+    list-style: none;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.8); /* Set a semi-transparent background color for mobile devices */
+    }
+  
+    .menu-toggle {
+      display: block; /* Show the menu toggle for mobile devices */
+    }
+  
+    .navbar-menu {
+      display: none; /* Hide the menu items by default for mobile devices */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+    }
+  
+    .navbar-menu.open {
+      display: flex; /* Show the menu items when the menu is open */
+    }
+  
+    .navbar-menu li {
+      margin-bottom: 1rem;
+    }
+  }
+  
